@@ -1,6 +1,6 @@
-# Projeto SQLite para Gerenciamento de Picks do League of Legends
+# Projeto SQLite para gerir os Picks do League of Legends
 
-Este projeto apresenta uma aplicação baseada em SQLite para gerenciar dados relacionados a campeões, funções (roles) e builds no League of Legends.
+Este projeto apresenta uma aplicação baseada em SQLite para gerir dados relacionados a campeões, funções (roles) e builds no League of Legends.
 
 ## Estrutura do Projeto
 
@@ -10,7 +10,7 @@ A estrutura do diretório é organizada da seguinte forma:
 app/
 ├── main.py                  # Script principal que inicializa e interage com a base de dados
 ├── create/
-│   ├── criar_tabelas.py      # Script para criar tabelas no base de dados
+│   ├── criar_tabelas.py      # Script para criar tabelas na base de dados
 │   ├── inserir_builds.py      # Script para inserir dados na tabela 'builds'
 │   ├── inserir_champions.py   # Script para inserir dados na tabela 'champions'
 │   └── inserir_roles.py       # Script para inserir dados na tabela 'roles'
@@ -66,7 +66,7 @@ A base de dados SQLite `lol.db` consiste nas seguintes tabelas:
 
 ### Passos para Executar
 
-1. Clone este repositório ou copie os arquivos para o seu computador local.
+1. Clone este repositório ou copie os ficheiros para o seu computador local.
 2. Navegue até o diretório do projeto.
 3. Execute o script principal para interagir com a base de dados:
 
@@ -76,7 +76,7 @@ A base de dados SQLite `lol.db` consiste nas seguintes tabelas:
 
 ### Scripts Individuais
 
-- **`criar_tabelas.py`:** Cria as tabelas no base de dados.
+- **`criar_tabelas.py`:** Cria as tabelas na base de dados.
 - **`inserir_champions.py`:** Adiciona novos campeões com seus respectivos roles e builds.
 - **`eliminar_champions.py`:** Exclui registros específicos da tabela `champions`.
 - **`ler_champions.py`:** Realiza consultas na tabela `champions`.
