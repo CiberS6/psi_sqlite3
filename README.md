@@ -112,7 +112,3 @@ Se desejar modificar as tabelas ou realizar outras consultas, você pode editar 
 ## Contribuições
 
 Contribuições são bem-vindas! Por favor, abra uma *issue* ou envie um *pull request* se desejar sugerir melhorias ou adicionar novas funcionalidades.
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
