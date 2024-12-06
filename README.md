@@ -10,7 +10,7 @@ A estrutura do diretório é organizada da seguinte forma:
 app/
 ├── main.py                  # Script principal que inicializa e interage com a base de dados
 ├── create/
-│   ├── criar_tabelas.py      # Script para criar tabelas no banco de dados
+│   ├── criar_tabelas.py      # Script para criar tabelas no base de dados
 │   ├── inserir_builds.py      # Script para inserir dados na tabela 'builds'
 │   ├── inserir_champions.py   # Script para inserir dados na tabela 'champions'
 │   └── inserir_roles.py       # Script para inserir dados na tabela 'roles'
@@ -76,7 +76,7 @@ A base de dados SQLite `lol.db` consiste nas seguintes tabelas:
 
 ### Scripts Individuais
 
-- **`criar_tabelas.py`:** Cria as tabelas no banco de dados.
+- **`criar_tabelas.py`:** Cria as tabelas no base de dados.
 - **`inserir_champions.py`:** Adiciona novos campeões com seus respectivos roles e builds.
 - **`eliminar_champions.py`:** Exclui registros específicos da tabela `champions`.
 - **`ler_champions.py`:** Realiza consultas na tabela `champions`.
@@ -105,7 +105,7 @@ Abaixo estão exemplos de consultas realizadas pelo script principal:
    SELECT * FROM champions;
    ```
 
-## Alterar a Estrutura do Banco de Dados
+## Alterar a Estrutura do Base de Dados
 
 Se desejar modificar as tabelas ou realizar outras consultas, você pode editar os scripts existentes ou criar novos. Certifique-se de realizar backup antes de executar alterações significativas.
 
