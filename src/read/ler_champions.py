@@ -1,18 +1,7 @@
 import sqlite3
 
-connection = sqlite3.connect('C:\\Users\\ba2490\Desktop\\tabelas_exercicio_new_new\\sqlite_database\\lol.db')
+connection = sqlite3.connect('C:\\Users\\ba2490\\Desktop\\psi_sqlite3_new\\psi_sqlite3\\sqlite_database\\lol.db')
 cursor = connection.cursor()
-
-# Consulta à tabela "picks" para selecionar os campos "id_pick", "id_champion" e "id_role"
-# onde o "id_champion" é igual a 1.
-#
-cursor.execute('SELECT id_pick, id_champion, id_role FROM picks WHERE id_champion = 1\n')
-resultados = cursor.fetchall()
-#
-# Itera sobre os resultados e imprime cada registo encontrado.
-#
-for picks in resultados:
-    print(picks)
 #
 # Consulta à tabela "champions" para selecionar os campos "id_champion" e "nome_champion"
 # onde o "nome_champion" é igual a "Akali".
@@ -28,8 +17,6 @@ for champions in resultados:
 # Consulta à tabela "roles" para selecionar os campos "id_role" e "nome_roles"
 # onde o "nome_roles" é igual a "Mid".
 #
-cursor.execute('SELECT id_role, nome_roles FROM roles WHERE nome_roles = "Mid"')
-resultados = cursor.fetchall()
 #
 # Itera sobre os resultados e imprime cada registo encontrado.
 for roles in resultados:
