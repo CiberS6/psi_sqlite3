@@ -108,7 +108,7 @@ Abaixo estão exemplos de consultas realizadas pelo script principal:
 ## Alterar a Estrutura do Base de Dados
 
 Se desejar modificar as tabelas ou realizar outras consultas, você pode editar os scripts existentes ou criar novos. Certifique-se de realizar backup antes de executar alterações significativas.
-
++-
 ## Contribuições
 
 Contribuições são bem-vindas! Por favor, abra uma *issue* ou envie um *pull request* se desejar sugerir melhorias ou adicionar novas funcionalidades.
