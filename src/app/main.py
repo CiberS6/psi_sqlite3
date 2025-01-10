@@ -123,6 +123,55 @@ resultados = cursor.fetchall()
 for champions in resultados:
     print(champions)
 
+# Criar uma tabela temporária a partir da tabela champions e meter por ordem alfabética os valores da tabela
+cursor.execute('''
+               CREATE TEMPORARY TABLE champions_temp AS
+               SELECT nome_champion, id_role, id_build
+               FROM champions
+               ORDER BY nome_champion
+                ''')
+
+# Eliminar os registos da tabela original
+cursor.execute('DELETE FROM champions')
+
+# Inserir os valores da tabela temporária na tabela original em ordem alfabética
+cursor.execute(''' 
+                INSERT INTO champions (id_champion, nome_champion, id_role, id_build)
+                SELECT NULL, nome_champion, id_role, id_build
+                FROM champions_temp;    
+''')
+
+# Eliminar a tabela temporária
+cursor.execute('DROP TABLE champions_temp')
+
+# Ler os valores da tabela champions por ordem alfabética
+cursor.execute('SELECT * FROM champions ORDER BY nome_champion')
+resultados = cursor.fetchall()
+
+for i in resultados:
+    print(i)
+
+# Fazer a leitura das tabelas juntado os valores com relação das 3 tabelas e os valores unicos de cada tabela
+cursor.execute('''
+                SELECT champions.id_champion, champions.nome_champion, champions.id_role, champions.id_build, roles.nome_role, builds.nome_build
+                FROM champions
+                INNER JOIN roles ON champions.id_role = roles.id_role
+                INNER JOIN builds ON champions.id_build = builds.id_build
+''')
+
+# Resultados do inner join
+resultaldos = cursor.fetchall()
+for i in resultaldos:
+    print(i)
+
+# Atualizar o id do champion com o nome "Teemo" para 49
+cursor.execute('''
+                UPDATE champions
+                SET id_champion = 49
+                WHERE nome_champion = "Teemo"
+                ''')
+
+
 # Guardar as alterações e fechar a conexão com a base de dados
 connection.commit()
 connection.close()
